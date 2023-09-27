@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Ajax.ActionLink("All Employees", "AllEmployee", "Home", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "DivUpdate"
+},new {@class="btn btn-outline-primary"})
+<span style="color:red">--</span>
+@Ajax.ActionLink("Top Three Employee", "Top3Employee", "Home", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "DivUpdate"
+}, new { @class = "btn btn-outline-primary" })
+<span style="color:red">--</span>
+@Ajax.ActionLink("Bottom Three Employee", "Bottom3Employee", "Home", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "DivUpdate"
+}, new { @class = "btn btn-outline-primary" })
+
+<div id="DivUpdate">
+
+</div>
